@@ -55,9 +55,9 @@ Eager singletons reveal initialization problems sooner, and ensure end-users get
 .asEagerSingleton()   | eager        | eager         |
 .in(Singleton.class)  | eager        | lazy          |
 .in(Scopes.SINGLETON) | eager        | lazy          |
-@Singleton            | eager`*`     | lazy          |
+@Singleton            | eager\*     | lazy          |
 
-`*` Guice will only eagerly build singletons for the types it knows about. These are the types mentioned in your modules, plus the transitive dependencies of those types.
+\* Guice will only eagerly build singletons for the types it knows about. These are the types mentioned in your modules, plus the transitive dependencies of those types.
 
 
 ### Choosing a scope
