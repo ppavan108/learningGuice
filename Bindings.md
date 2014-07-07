@@ -8,4 +8,4 @@ To create bindings, extend `AbstractModule` and override its `configure` method.
 Use modules to create [[linked bindings|LinkedBindings]], [[instance bindings|InstanceBindings]], [[@Provides methods|ProvidesMethods]], [[provider bindings|ProviderBindings]], [[constructor bindings|ToConstructorBindings]] and [[untargetted bindings|UntargettedBindings]].
 
 #### More Bindings
-In addition to the bindings you specify the injector includes [[built-in bindings|BuiltInBindings]]. When a dependency is requested but not found it attempts to create a [JustInTimeBindings just-in-time binding]. The injector also includes bindings for the [[providers|InjectingProviders]] of its other bindings.
+In addition to the bindings you specify the injector includes [[built-in bindings|BuiltInBindings]]. When a dependency is requested but not found it attempts to create a [[just-in-time binding|JustInTimeBindings]]. The injector also includes bindings for the [[providers|InjectingProviders]] of its other bindings.
