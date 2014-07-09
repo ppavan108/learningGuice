@@ -72,7 +72,7 @@ There are a few ways to resolve this cycle:
 
 Cycles often reflect insufficiently granular decomposition.  To eliminate such cycles, extract the Dependency Case into a separate class.
 
-In this example, the work of managing the incoming customers can be extracted into another class, say `javaCustomerLine`, and that can be injected into the Clerk and Store.
+In this example, the work of managing the incoming customers can be extracted into another class, say `CustomerLine`, and that can be injected into the Clerk and Store.
 
 ```java
 public class Store {
