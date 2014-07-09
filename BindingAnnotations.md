@@ -1,5 +1,5 @@
 ### Binding Annotations
-Occasionally you'll want multiple bindings for a same type. For example, you might want both a !PayPal credit card processor and a Google Checkout processor. To enable this, bindings support an optional *binding annotation*. The annotation and type together uniquely identify a binding. This pair is called a *key*.
+Occasionally you'll want multiple bindings for a same type. For example, you might want both a PayPal credit card processor and a Google Checkout processor. To enable this, bindings support an optional *binding annotation*. The annotation and type together uniquely identify a binding. This pair is called a *key*.
 
 Defining a binding annotation requires two lines of code plus several imports. Put this in its own `.java` file or inside the type that it annotates. 
 ```java
