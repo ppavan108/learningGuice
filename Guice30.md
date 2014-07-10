@@ -3,13 +3,13 @@ _Guice 3.0 Release_
 Released March 24, 2011
 
 #### Downloads
- * **[guice-3.0.zip](http://google-guice.googlecode.com/files/guice-3.0.zip )** core & extension jars.  866KB
- * **[guice-3.0-src.zip](http://google-guice.googlecode.com/files/guice-3.0-src.zip)** sources, tests, dependencies and Javadoc. 23.8MB
- * **[guice-3.0-no_aop.jar](http://google-guice.googlecode.com/files/guice-3.0-no_aop.jar)** core without AOP, suitable for Android.  470KB
+ * **[guice-3.0.zip](https://github.com/google/guice/releases/download/3.0/guice-3.0.zip)** core & extension jars.  866KB
+ * **[guice-3.0-src.zip](https://github.com/google/guice/archive/3.0.zip)** sources, tests, dependencies and Javadoc. 23.8MB
+ * **[guice-3.0-no_aop.jar](https://github.com/google/guice/releases/download/3.0/guice-3.0-no_aop.jar)** core without AOP, suitable for Android.  470KB
 
 #### Docs
-  * [Javadoc API](http://google-guice.googlecode.com/svn/tags/3.0/javadoc/index.html)
-  * [API Changes from 2.0 to 3.0, by JDiff](http://google-guice.googlecode.com/svn/trunk/latest-api-diffs/3.0/changes.html)
+  * [Javadoc API](http://google.github.io/guice/api-docs/3.0/javadoc/index.html)
+  * [API Changes from 2.0 to 3.0, by JDiff](http://google.github.io/guice/api-docs/3.0/api-diffs/changes.html)
 
 #### New Features
   * [[JSR 330 support|JSR330]]
@@ -83,7 +83,7 @@ Released March 24, 2011
      * ConvertedConstantBinding now exposes the TypeConverterBinding used to convert the constant.
 
 #### Migrating from Guice 2.0
-See the [JDiff change report](http://google-guice.googlecode.com/svn/trunk/latest-api-diffs/3.0/changes.html) for complete details.
+See the [JDiff change report](http://google.github.io/guice/api-docs/3.0/api-diffs/changes.html) for complete details.
 
 #### JSR 330
 Guice 3.0 now requires JSR 330 on your classpath.  This is the javax.inject.jar included in the guice download.

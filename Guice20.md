@@ -3,13 +3,13 @@ _Guice 2.0 Release_
 Released May 19, 2009
 
 ##### Downloads
-  * **[guice-2.0.zip](http://google-guice.googlecode.com/files/guice-2.0.zip)** jars and Javadoc. 1.1MB
-  * **[guice-2.0-src.zip](http://google-guice.googlecode.com/files/guice-2.0-src.zip)** sources, tests, dependencies and Javadoc. 16.5MB
-  * **[guice-2.0-no_aop.jar](http://google-guice.googlecode.com/files/guice-2.0-no_aop.jar)** replaces guice-2.0.jar on platforms that don't support AOP (ie. Android). 430KB
+  * **[guice-2.0.zip](https://github.com/google/guice/releases/download/2.0/guice-2.0.zip)** jars and Javadoc. 1.1MB
+  * **[guice-2.0-src.zip](https://github.com/google/guice/archive/2.0.zip)** sources, tests, dependencies and Javadoc. 16.5MB
+  * **[guice-2.0-no_aop.jar](https://github.com/google/guice/releases/download/2.0/guice-2.0-no_aop.jar)** replaces guice-2.0.jar on platforms that don't support AOP (ie. Android). 430KB
 
 ##### Docs
-  * [Javadoc API](http://google-guice.googlecode.com/svn/tags/2.0/javadoc/index.html)
-  * [User's Guide](http://code.google.com/docreader/#p=google-guice&s=google-guice&t=Motivation)
+  * [Javadoc API](http://google.github.io/guice/api-docs/2.0/javadoc/index.html)
+  * [User's Guide](https://github.com/google/guice/wiki/Motivation)
 
 ##### New Features
 
@@ -62,7 +62,7 @@ public class SnacksModule extends AbstractModule {
 ```
 
 ###### Private Modules
-[PrivateModules](http://google-guice.googlecode.com/svn/trunk/latest-javadoc/com/google/inject/PrivateModule.html) can be used to create bindings that are not externally visible. This makes it easier to encapsulate dependencies and to avoid bind conflicts.
+[PrivateModules](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/PrivateModule.html) can be used to create bindings that are not externally visible. This makes it easier to encapsulate dependencies and to avoid bind conflicts.
 
 ###### Servlets
 `ServletModule` now supports programmatic configuration of servlets and filters (get rid of web.xml). 
@@ -77,7 +77,7 @@ Guice Servlet also supports regex URL mapping and the ability to package and bun
 `GuiceServletContextListener` can be used to help bootstrap a Guice application in a servlet container.
 
 ###### Child Injectors
-[Injector.createChildInjector](http://google-guice.googlecode.com/svn/trunk/latest-javadoc/com/google/inject/Injector.html#createChildInjector(java.lang.Iterable)) allows you to create child injectors that inherit the bindings, scopes, interceptors and converters of their parent. This API is primarily intended for extensions and tools.
+[Injector.createChildInjector](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/Injector.html#createChildInjector(java.lang.Iterable)) allows you to create child injectors that inherit the bindings, scopes, interceptors and converters of their parent. This API is primarily intended for extensions and tools.
 
 ###### Even Better Error Reporting
 Exceptions in Guice 1.0 tend to include long chains of 'caused by' exceptions. We've tidied this up! Now a single exception describes concisely what Guice was doing when the problem occurred.
@@ -101,7 +101,7 @@ Guice does bytecode generation internally to implement AOP. In version 2.0, gene
 [Parameterized injection points](http://groups.google.com/group/google-guice/browse_thread/thread/1355313a074d8094/88270edbbeae2df8) allow you to inject types like `Reducer<T>` or `Converter<A, B>`. Guice will figure out what `T` is and find the binding for that type. [TypeLiteral injection](http://publicobject.com/2008/11/guice-punches-erasure-in-face.html) means you can inject a `TypeLiteral<T>` into your classes. Use this to reify [Java 5 type erasure](http://java.sun.com/docs/books/tutorial/java/generics/erasure.html). The `TypeLiteral` class now includes library methods for manual type resolution.
 
 ###### Migrating from Guice 1.0
-Guice 2.0 breaks compatibility with Guice 1.0 as described below. See the [JDiff change report](http://google-guice.googlecode.com/svn/trunk/latest-api-diffs/2.0/changes.html) for complete details. 
+Guice 2.0 breaks compatibility with Guice 1.0 as described below. See the [JDiff change report](http://google.github.io/guice/api-docs/2.0/api-diffs/changes.html) for complete details. 
 
 ###### Exception Types
 In Guice 1.0, when a custom provider throws an unchecked exception, sometimes Guice wraps the exception and sometimes it doesn't. This depends on whether the provider is being called directly (via Provider.get()) or indirectly (such as for injecting into another type).

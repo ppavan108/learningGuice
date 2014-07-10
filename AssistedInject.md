@@ -69,7 +69,7 @@ bind(PaymentFactory.class).toProvider(
 ```
 
 ##### AssistedInject in Guice 3.0
-Guice 3.0 improves AssistedInject by offering the ability to allow different factory methods to return different types or different constructors from one type.  See the [FactoryModuleBuilder javadoc](http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/assistedinject/FactoryModuleBuilder.html) for complete details.
+Guice 3.0 improves AssistedInject by offering the ability to allow different factory methods to return different types or different constructors from one type.  See the [FactoryModuleBuilder javadoc](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/assistedinject/FactoryModuleBuilder.html) for complete details.
 ```java
 install(new FactoryModuleBuilder()
      .implement(Payment.class, RealPayment.class)
@@ -87,7 +87,7 @@ With AssistedInject, it's easier to create classes that need extra arguments at 
 
 ##### Inspecting AssistedInject Bindings _(new in Guice 3.0)_
 
-Visiting an assisted inject binding is useful for tests or debugging.  AssistedInject uses the [[extensions SPI|ExtensionSPI]] to let you learn more about the factory binding.  You can visit bindings with an [AssistedInjectTargetVisitor](http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/assistedinject/AssistedInjectTargetVisitor.html) to see details about the binding.
+Visiting an assisted inject binding is useful for tests or debugging.  AssistedInject uses the [[extensions SPI|ExtensionSPI]] to let you learn more about the factory binding.  You can visit bindings with an [AssistedInjectTargetVisitor](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/assistedinject/AssistedInjectTargetVisitor.html) to see details about the binding.
 
 ```java  
   Binding<PaymentFactory> binding = injector.getBinding(PaymentFactory.class);

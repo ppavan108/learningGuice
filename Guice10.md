@@ -4,13 +4,13 @@ _Guice 1.0 Release_
 Released March 8, 2007.
 
 #### Downloads
-  * [guice-1.0.zip](http://google-guice.googlecode.com/files/guice-1.0.zip)
-  * [guice-1.0-src.zip](http://google-guice.googlecode.com/files/guice-1.0-src.zip)
-  * [guice-struts2-plugin-1.0.1.jar](http://google-guice.googlecode.com/files/guice-struts2-plugin-1.0.1.jar)
+  * [guice-1.0.zip](https://github.com/google/guice/releases/download/1.0/guice-1.0.zip)
+  * [guice-1.0-src.zip](https://github.com/google/guice/archive/1.0.zip)
+  * [guice-struts2-plugin-1.0.1.jar](https://github.com/google/guice/releases/download/1.0/guice-struts2-plugin-1.0.1.jar)
 
 
 #### Docs
-  * [Javadoc API](http://google-guice.googlecode.com/svn/tags/1.0/javadoc/index.html)
+  * [Javadoc API](http://google.github.io/guice/api-docs/1.0/javadoc/index.html)
   * [Guice 1.0 User's Guide.pdf](http://google-guice.googlecode.com/files/Guice%201.0%20User%27s%20Guide.pdf)
 
 #### Changes

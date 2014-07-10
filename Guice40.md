@@ -3,7 +3,6 @@ _Guice 4.0 Beta Release_
 Released March 20, 2014 _Note: This date and page will be updated upon final release_
 
 #### Downloads
-**The code.google.com downloads system has been deprecated, so all future project artifacts will be hosted as maven artifacts in the central maven repository**
 
  * Guice: [guice-4.0-beta4.jar](http://search.maven.org/remotecontent?filepath=com/google/inject/guice/4.0-beta4/guice-4.0-beta4.jar)
  * Guice (No AOP): [guice-4.0-beta4-no_aop.jar](http://search.maven.org/remotecontent?filepath=com/google/inject/guice/4.0-beta4/guice-4.0-beta4-no_aop.jar)
@@ -11,8 +10,9 @@ Released March 20, 2014 _Note: This date and page will be updated upon final rel
 
 #### Docs
 
-  * [API documentation](https://google-guice.googlecode.com/git/latest-javadoc/index.html)
-  * [API Changes from 3.0 to 4.0, by JDiff](https://google-guice.googlecode.com/git/latest-api-diffs/4.0/changes.html)
+_These are links to the latest documentation, which may have changed since the beta was cut._
+  * [API documentation](https://google.github.io/guice/api-docs/latest/javadoc/index.html)
+  * [API Changes from 3.0 to 4.0, by JDiff](http://google.github.io/guice/api-docs/latest/api-diffs/changes.html)
 
 #### New Features
 
@@ -20,7 +20,5 @@ Released March 20, 2014 _Note: This date and page will be updated upon final rel
   * _List of changes pending release._
 
 #### Migrating from Guice 3.0
-See the [JDiff change report](https://google-guice.googlecode.com/git/latest-api-diffs/4.0/changes.html) for complete details.
+See the [JDiff change report](http://google.github.io/guice/api-docs/latest/api-diffs/changes.html) for complete details.
 
-#### JSR 330
-Guice 4.0 requires JSR 330 on your classpath.  This is the javax.inject.jar included in the guice download.

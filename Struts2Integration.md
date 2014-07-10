@@ -1,7 +1,7 @@
 ### Struts 2 Integration
 
 To install the Guice Struts 2 plugin with Struts 2.2 or later, simply include `guice-struts2-plugin-3.0.jar` in your web application's classpath, 
-create a subclass of GuiceServletContextListener that implements getInjector and adds any servlets and filters (using ServletModule) and the Struts2GuicePluginModule, and a web.xml file that references your GuiceServletContextListener subclass as a listener.  For examples, look at the example [web.xml](http://google-guice.googlecode.com/svn/trunk/extensions/struts2/example/root/WEB-INF/web.xml) and [GuiceServletContextListener subclass](http://google-guice.googlecode.com/svn/trunk/extensions/struts2/example/src/com/google/inject/struts2/example/ExampleListener.java).
+create a subclass of GuiceServletContextListener that implements getInjector and adds any servlets and filters (using ServletModule) and the Struts2GuicePluginModule, and a web.xml file that references your GuiceServletContextListener subclass as a listener.  For examples, look at the example [web.xml](https://github.com/google/guice/blob/master/extensions/struts2/example/root/WEB-INF/web.xml) and [GuiceServletContextListener subclass](https://github.com/google/guice/blob/master/extensions/struts2/example/src/com/google/inject/struts2/example/ExampleListener.java).
 
 Guice will inject all of your Struts 2 objects including actions and interceptors. You can even scope your actions.
 #### A Counting Example

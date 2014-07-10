@@ -131,7 +131,7 @@ This way you can map several URI patterns to the same servlet. A similar syntax 
 
 ### Using RequestScope
 
-Each servlet configured with a `ServletModule` is executed within <a href="http://code.google.com/p/google-guice/source/browse/trunk/extensions/servlet/src/com/google/inject/servlet/ServletScopes.java#45"> `RequestScope`</a>.  
+Each servlet configured with a `ServletModule` is executed within `RequestScope`.  
 
 By default, there are several elements available to be injected, each of which is bound in RequestScope:
   * `HttpServletRequest` / `ServletRequest`

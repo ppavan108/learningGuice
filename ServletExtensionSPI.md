@@ -8,7 +8,7 @@ Sometimes you want to examine your Modules and/or Bindings to inspect which URLs
 
 #### Inspecting Servlet Bindings
 
-[ServletModuleTargetVisitor](http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/servlet/ServletModuleTargetVisitor.html) is an extension to the core [BindingTargetVisitor](http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/spi/BindingTargetVisitor.html).  You can implement this interface and call `binding.acceptTargetVisitor(myVisitor)` to learn details about servlet bindings.
+[ServletModuleTargetVisitor](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/servlet/ServletModuleTargetVisitor.html) is an extension to the core [BindingTargetVisitor](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/spi/BindingTargetVisitor.html).  You can implement this interface and call `binding.acceptTargetVisitor(myVisitor)` to learn details about servlet bindings.
 
 ```java
   boolean isBindingForUri(Binding<?> binding, String uri) {

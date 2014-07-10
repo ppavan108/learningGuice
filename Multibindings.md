@@ -1,6 +1,6 @@
 _Overview of Multibinder and MapBinder extensions_
 ### Multibindings
-[Multibinder](http://google-guice.googlecode.com/svn/trunk/latest-javadoc/com/google/inject/multibindings/Multibinder.htm) and [MapBinder](http://google-guice.googlecode.com/svn/trunk/latest-javadoc/com/google/inject/multibindings/MapBinder.html) are intended for plugin-type architectures, where you've got several modules contributing Servlets, Actions, Filters, Components or even just names. 
+[Multibinder](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/multibindings/Multibinder.html) and [MapBinder](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/multibindings/MapBinder.html) are intended for plugin-type architectures, where you've got several modules contributing Servlets, Actions, Filters, Components or even just names. 
 
 #### Using Multibindings to host Plugins
 Multibindings make it easy to support plugins in your application. Made popular by [IDEs](http://www.eclipseplugincentral.com) and [browsers](https://addons.mozilla.org/en-US/firefox/), this pattern exposes APIs for extending the behaviour of an application.
@@ -101,13 +101,13 @@ public class PrettyTweets {
 ```
 If it is infeasible to recompile each time the plugin set changes, the list of plugin modules can be loaded from a configuration file.
 
-Note that this mechanism cannot load or unload plugins while the system is running. If you need to hot-swap application components, investigate [Guice's OSGi bindings](http://code.google.com/p/google-guice/wiki/OSGi).
+Note that this mechanism cannot load or unload plugins while the system is running. If you need to hot-swap application components, investigate [[Guice's OSGi|OSGi]].
 
 #### Limitations
 When you use PrivateModules with multibindings, all of the elements must be bound in the same environment. You cannot create collections whose elements span private modules. Otherwise injector creation will fail.
 
 #### Inspecting Multibindings or MapBindings _(new in Guice 3.0)_
-Sometimes you need to inspect the elements that make up a Multibinder or MapBinder.  For example, you may need a test that strips all elements of a MapBinder out of a series of modules.  You can visit a binding with a [MultibindingTargetVisitor](http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/multibindings/MultibindingsTargetVisitor.html) to get details about Multibindings or MapBindings.  After you have an instance of a [MapBinderBinding](http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/multibindings/MapBinderBinding.html) or a [MultibinderBinding](http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/multibindings/MultibinderBinding.html) you can learn more.
+Sometimes you need to inspect the elements that make up a Multibinder or MapBinder.  For example, you may need a test that strips all elements of a MapBinder out of a series of modules.  You can visit a binding with a [MultibindingTargetVisitor](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/multibindings/MultibindingsTargetVisitor.html) to get details about Multibindings or MapBindings.  After you have an instance of a [MapBinderBinding](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/multibindings/MapBinderBinding.html) or a [MultibinderBinding](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/multibindings/MultibinderBinding.html) you can learn more.
 
 ```java
    // Find the MapBinderBinding and use it to remove elements within it.

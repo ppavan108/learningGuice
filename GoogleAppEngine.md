@@ -42,7 +42,7 @@ public class MyGuiceServletContextListener extends GuiceServletContextListener {
 ```
 
 ##### Web.xml Configuration
-You must register both the [[GuiceFilter|Servlets]] and your subclass of [GuiceServletContextListener](http://google-guice.googlecode.com/svn/trunk/latest-javadoc/com/google/inject/servlet/GuiceServletContextListener.html) in your application's `web.xml` file. All other servlets and filters may be configured in your servlet module.
+You must register both the [[GuiceFilter|Servlets]] and your subclass of [GuiceServletContextListener](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/servlet/GuiceServletContextListener.html) in your application's `web.xml` file. All other servlets and filters may be configured in your servlet module.
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <web-app 

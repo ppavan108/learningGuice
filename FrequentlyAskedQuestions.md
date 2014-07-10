@@ -41,7 +41,7 @@ public class FooClient {
 You may save some keystrokes by using Guice's built-in `@Named` binding annotation rather than creating your own.
 
 ##### How do I load configuration properties?
-Use [Names.bindProperties()](http://google-guice.googlecode.com/svn/trunk/latest-javadoc/com/google/inject/name/Names.html#bindProperties(com.google.inject.Binder,%20java.util.Properties)) to create bindings for each of the properties in a configuration file.
+Use [Names.bindProperties()](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/name/Names.html#bindProperties(com.google.inject.Binder,%20java.util.Properties)) to create bindings for each of the properties in a configuration file.
 
 ##### How do I pass a parameter when creating an object via Guice?
 You can't directly pass a parameter into an injected value. But you can use Guice to create a `Factory`, and use that factory to create your object.
@@ -128,7 +128,7 @@ class Example {
   }
 }
 ```
-You can use a [TypeLiteral](http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/TypeLiteral.html) to create the binding. `TypeLiteral` is a special class that allows you to specify a full parameterized type.
+You can use a [TypeLiteral](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/TypeLiteral.html) to create the binding. `TypeLiteral` is a special class that allows you to specify a full parameterized type.
 ```java
   @Override public void configure() {
     bind(new TypeLiteral<List<String>>() {}).toInstance(new ArrayList<String>());

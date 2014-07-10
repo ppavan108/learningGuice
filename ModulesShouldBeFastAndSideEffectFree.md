@@ -4,7 +4,7 @@ Rather than using an external XML file for configuration, Guice modules are writ
 But the full power of the Java language comes at a cost: it's easy to do _too much_ in a module. It's tempting to connect to a database connection or to start an HTTP server in your Guice module. Don't do this! Doing heavy-lifting in a module poses problems:
   * **Modules start up, but they don't shut down.** Should you open a database connection in your module, you won't have any hook to close it. 
   * **Modules should be tested.** If a module opens a database as a course of execution, it becomes difficult to write  unit tests for it.
-  * **Modules can be overridden.** Guice modules support [overrides](http://google-guice.googlecode.com/svn/trunk/latest-javadoc/com/google/inject/util/Modules.html#override(com.google.inject.Module...)), allowing a production service to be substituted with a lightweight or test one. When the production service is created as a part of module execution, such overrides are ineffective.
+  * **Modules can be overridden.** Guice modules support [overrides](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/util/Modules.html#override(com.google.inject.Module...)), allowing a production service to be substituted with a lightweight or test one. When the production service is created as a part of module execution, such overrides are ineffective.
 
 Rather than doing work in the module itself, define an interface that can do the work at the proper level of abstraction. In our applications we use this interface:
 ```java
