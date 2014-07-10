@@ -94,7 +94,7 @@ digraph injector {
 #### Rendering the .dot file
 Download a [Graphviz viewer](http://www.graphviz.org/) for your platform, and use it to render the `.dot` file. The rendered graph might take a few minutes to render. Exporting the rendered graph as a PDF or image makes it easier to share.
 
-http://google-guice.googlecode.com/files/Grapher_screenshot.png
+[<img src="http://google.github.io/guice/user-docs/Grapher_screenshot.png" width="300px" height="300px" />](http://google.github.io/guice/user-docs/Grapher_screenshot.png)
 
 On Linux, you can use the command-line `dot` tool to convert `.dot` files into images.
 ```shell
