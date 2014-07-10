@@ -11,7 +11,7 @@ Released March 8, 2007.
 
 #### Docs
   * [Javadoc API](http://google.github.io/guice/api-docs/1.0/javadoc/index.html)
-  * [Guice 1.0 User's Guide.pdf](http://google-guice.googlecode.com/files/Guice%201.0%20User%27s%20Guide.pdf)
+  * [Guice 1.0 User's Guide.pdf](http://google.github.io/guice/user-docs/Guice-1.0-Users-Guide.pdf)
 
 #### Changes
 
