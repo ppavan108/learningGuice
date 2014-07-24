@@ -7,7 +7,7 @@
       * [[Instance Bindings|InstanceBindings]]
       * [[@Provides Methods|ProvidesMethods]]
       * [[Provider Bindings|ProviderBindings]]
-      * [[Untargetted Bindings|UntargettedBindings]]
+      * [[Untargeted Bindings|UntargettedBindings]]
       * [[Constructor Bindings|ToConstructorBindings]]
       * [[Built-in Bindings|BuiltInBindings]]
       * [[Just-In-Time Bindings|JustInTimeBindings]]
