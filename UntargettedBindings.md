@@ -1,5 +1,5 @@
 _Creating bindings that don't have targets_
-### Untargetted Bindings
+### Untargeted Bindings
 
 You may create bindings without specifying a target. This is most useful for concrete classes and types annotated by either `@ImplementedBy` or `@ProvidedBy`. An untargetted binding informs the injector about a type, so it may prepare dependencies eagerly. Untargetted bindings have no _to_ clause, like so:
 ```java
