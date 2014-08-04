@@ -42,7 +42,7 @@ The plugin author registers their implementation using a multibinder. Some plugi
 public class FlickrPluginModule extends AbstractModule {
   public void configure() {
     Multibinder<UriSummarizer> uriBinder = Multibinder.newSetBinder(binder(), UriSummarizer.class);
-    uriBinder.addBinding().to(FlickrSummarizer.class);
+    uriBinder.addBinding().to(FlickrPhotoSummarizer.class);
 
     ... // bind plugin dependencies, such as our Flickr API key
   }
