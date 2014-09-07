@@ -106,6 +106,12 @@ public class SimpleScope implements Scope {
         T current = (T) scopedObjects.get(key);
         if (current == null && !scopedObjects.containsKey(key)) {
           current = unscoped.get();
+
+          // don't remember proxies; these exist only to serve circular dependencies
+          if (current instanceof CircularDependencyProxy) {
+            return current;
+          }
+
           scopedObjects.put(key, current);
         }
         return current;
