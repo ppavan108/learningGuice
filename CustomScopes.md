@@ -108,7 +108,7 @@ public class SimpleScope implements Scope {
           current = unscoped.get();
 
           // don't remember proxies; these exist only to serve circular dependencies
-          if (current instanceof CircularDependencyProxy) {
+          if (Scopes.isCircularProxy(current)) {
             return current;
           }
 
