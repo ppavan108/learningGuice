@@ -175,6 +175,10 @@ And the binding might look like this:
          .....
         filter("/process-user*").through(createUserIdScopingFilter());
     }
+
+    @Provides @Named("user-id") @RequestScoped Integer provideUserId() {
+      throw new IllegalStateException("user id must be manually seeded");
+    }
   }
 ```
 
@@ -187,7 +191,7 @@ class UserProcessingServlet extends HttpServlet {
       ....
    
       @Inject UserProcessingServlet(
-         Provider<Integer> userIdProvider,
+         @Named("user-id") Provider<Integer> userIdProvider,
          .....) {
             this.userIdProvider = userIdProvider;
        }
