@@ -5,8 +5,8 @@ _Note: This date and page will be updated upon final release_
 
 #### Downloads
 
- * Guice: [guice-4.0-beta5.jar](http://search.maven.org/remotecontent?filepath=com/google/inject/guice/4.0-beta4/guice-4.0-beta5.jar)
- * Guice (No AOP): [guice-4.0-beta5-no_aop.jar](http://search.maven.org/remotecontent?filepath=com/google/inject/guice/4.0-beta4/guice-4.0-beta5-no_aop.jar)
+ * Guice: [guice-4.0-beta5.jar](http://search.maven.org/remotecontent?filepath=com/google/inject/guice/4.0-beta5/guice-4.0-beta5.jar)
+ * Guice (No AOP): [guice-4.0-beta5-no_aop.jar](http://search.maven.org/remotecontent?filepath=com/google/inject/guice/4.0-beta5/guice-4.0-beta5-no_aop.jar)
  * Guice extensions are all directly downloadable [from this search page](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.google.inject.extensions%22%20AND%20v%3A%224.0-beta5%22).  Just click on the "jar" link for the appropriate extension.
 
 #### Docs
