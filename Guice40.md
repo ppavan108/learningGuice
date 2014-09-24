@@ -1,6 +1,6 @@
 _Guice 4.0 Beta Release_
 ### Guice 4.0 - Beta 5
-Released Sept 24, 2014
+Released Sept 24, 2014<br>
 _Note: This date and page will be updated upon final release_
 
 #### Downloads
