@@ -195,7 +195,7 @@ public class BillingModule extends AbstractModule {
   }
 }
 ```
-We add `@Inject` to `RealBillingService`'s constructor, which directs Guice to use it. Guice will inspect the annotated constructor, and lookup values for each of parameter.
+We add `@Inject` to `RealBillingService`'s constructor, which directs Guice to use it. Guice will inspect the annotated constructor, and lookup values for each parameter.
 ```java
 public class RealBillingService implements BillingService {
   private final CreditCardProcessor processor;
