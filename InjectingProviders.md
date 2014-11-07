@@ -1,5 +1,5 @@
 ### Injecting Providers
-With normal dependency injection, each type gets exactly *one instance* of each of its dependent types. The `RealBillingService` gets one `CreditCardProcessor` and one `TransactionLog`. When this flexibility is necessary, Guice binds a provider. Providers produce a value when the `get()` method is invoked:
+With normal dependency injection, each type gets exactly *one instance* of each of its dependent types. The `RealBillingService` gets one `CreditCardProcessor` and one `TransactionLog`. Sometimes you want more than one instance of your dependent types.  When this flexibility is necessary, Guice binds a provider. Providers produce a value when the `get()` method is invoked:
 ```java
 public interface Provider<T> {
   T get();
