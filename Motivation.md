@@ -47,8 +47,8 @@ public class CreditCardProcessorFactory {
   
   private static CreditCardProcessor instance;
   
-  public static void setInstance(CreditCardProcessor creditCardProcessor) {
-    instance = creditCardProcessor;
+  public static void setInstance(CreditCardProcessor processor) {
+    instance = processor;
   }
 
   public static CreditCardProcessor getInstance() {
@@ -89,11 +89,11 @@ public class RealBillingServiceTest extends TestCase {
   private final CreditCard creditCard = new CreditCard("1234", 11, 2010);
 
   private final InMemoryTransactionLog transactionLog = new InMemoryTransactionLog();
-  private final FakeCreditCardProcessor creditCardProcessor = new FakeCreditCardProcessor();
+  private final FakeCreditCardProcessor processor = new FakeCreditCardProcessor();
 
   @Override public void setUp() {
     TransactionLogFactory.setInstance(transactionLog);
-    CreditCardProcessorFactory.setInstance(creditCardProcessor);
+    CreditCardProcessorFactory.setInstance(processor);
   }
 
   @Override public void tearDown() {
@@ -107,8 +107,8 @@ public class RealBillingServiceTest extends TestCase {
 
     assertTrue(receipt.hasSuccessfulCharge());
     assertEquals(100, receipt.getAmountOfCharge());
-    assertEquals(creditCard, creditCardProcessor.getCardOfOnlyCharge());
-    assertEquals(100, creditCardProcessor.getAmountOfOnlyCharge());
+    assertEquals(creditCard, processor.getCardOfOnlyCharge());
+    assertEquals(100, processor.getAmountOfOnlyCharge());
     assertTrue(transactionLog.wasSuccessLogged());
   }
 }
@@ -155,17 +155,17 @@ public class RealBillingServiceTest extends TestCase {
   private final CreditCard creditCard = new CreditCard("1234", 11, 2010);
 
   private final InMemoryTransactionLog transactionLog = new InMemoryTransactionLog();
-  private final FakeCreditCardProcessor creditCardProcessor = new FakeCreditCardProcessor();
+  private final FakeCreditCardProcessor processor = new FakeCreditCardProcessor();
 
   public void testSuccessfulCharge() {
     RealBillingService billingService
-        = new RealBillingService(creditCardProcessor, transactionLog);
+        = new RealBillingService(processor, transactionLog);
     Receipt receipt = billingService.chargeOrder(order, creditCard);
 
     assertTrue(receipt.hasSuccessfulCharge());
     assertEquals(100, receipt.getAmountOfCharge());
-    assertEquals(creditCard, creditCardProcessor.getCardOfOnlyCharge());
-    assertEquals(100, creditCardProcessor.getAmountOfOnlyCharge());
+    assertEquals(creditCard, processor.getCardOfOnlyCharge());
+    assertEquals(100, processor.getAmountOfOnlyCharge());
     assertTrue(transactionLog.wasSuccessLogged());
   }
 }
@@ -178,7 +178,7 @@ Unfortunately, now the clients of `BillingService` need to lookup its dependenci
     CreditCardProcessor processor = new PaypalCreditCardProcessor();
     TransactionLog transactionLog = new DatabaseTransactionLog();
     BillingService billingService
-        = new RealBillingService(creditCardProcessor, transactionLog);
+        = new RealBillingService(processor, transactionLog);
     ...
   }
 ```
