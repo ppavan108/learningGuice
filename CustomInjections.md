@@ -24,15 +24,19 @@ We start by registering our custom type listener `Log4JTypeListener` in a module
     bindListener(Matchers.any(), new Log4JTypeListener());
   }
 ```
-You can implement the [TypeListener](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/spi/TypeListener.html) to scan through  a type's fields, looking for Log4J loggers. For each logger field that's encountered, we register a `Log4JMembersInjector` on the passed-in [TypeEncounter](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/spi/TypeEncounter.html):
+You can implement the [TypeListener](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/spi/TypeListener.html) to scan through a type's fields, looking for Log4J loggers. For each logger field that's encountered, we register a `Log4JMembersInjector` on the passed-in [TypeEncounter](http://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/spi/TypeEncounter.html):
 ```java
   class Log4JTypeListener implements TypeListener {
     public <T> void hear(TypeLiteral<T> typeLiteral, TypeEncounter<T> typeEncounter) {
-      for (Field field : typeLiteral.getRawType().getDeclaredFields()) {
-        if (field.getType() == Logger.class
-            && field.isAnnotationPresent(InjectLogger.class)) {
-          typeEncounter.register(new Log4JMembersInjector<T>(field));
+      Class<?> clazz = typeLiteral.getRawType();
+      while (clazz != null) {
+        for (Field field : clazz.getDeclaredFields()) {
+          if (field.getType() == Logger.class &&
+            field.isAnnotationPresent(InjectLogger.class)) {
+            typeEncounter.register(new Log4JMembersInjector<T>(field));
+          }
         }
+        clazz = clazz.getSuperclass();
       }
     }
   }
