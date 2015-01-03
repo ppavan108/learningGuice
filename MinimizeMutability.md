@@ -16,7 +16,7 @@ public class RealPaymentService implements PaymentService {
 
    ...
 ```
-All fields of this class are final and initialized by a single `@Inject`-annotated constructor. [Effective Java](http://java.sun.com/docs/books/effective/toc.html) discusses other benefits of immutability.
+All fields of this class are final and initialized by a single `@Inject`-annotated constructor. [Effective Java](http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683) discusses other benefits of immutability.
 
 #### Injecting methods and fields
 *Constructor injection* has some limitations:
