@@ -144,7 +144,7 @@ public class SimpleScope implements Scope {
 #### Binding the annotation to the implementation
 You must attach your scoping annotation to the corresponding scope implementation. Just like bindings, you can configure this in your module's `configure()` method. Usually you'll also bind the scope itself, so interceptors or filters can use it.
 ```java
-public class BatchScopeModule {
+public class BatchScopeModule extends AbstractModule {
   public void configure() {
     SimpleScope batchScope = new SimpleScope();
 
