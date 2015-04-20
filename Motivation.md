@@ -120,7 +120,7 @@ But the biggest problem is that the dependencies are *hidden in the code*. If we
 Quality problems will be caught by QA or acceptance tests. That may be sufficient, but we can certainly do better.
 
 ### Dependency Injection
-Like the factory, dependency injection is just a design pattern. The core principal is to *separate behaviour from dependency resolution*. In our example, the `RealBillingService` is not responsible for looking up the `TransactionLog` and `CreditCardProcessor`. Instead, they're passed in as constructor parameters:
+Like the factory, dependency injection is just a design pattern. The core principle is to *separate behaviour from dependency resolution*. In our example, the `RealBillingService` is not responsible for looking up the `TransactionLog` and `CreditCardProcessor`. Instead, they're passed in as constructor parameters:
 ```java
 public class RealBillingService implements BillingService {
   private final CreditCardProcessor processor;
