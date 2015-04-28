@@ -12,8 +12,8 @@ _Note: This date and page will be updated upon final release_
 #### Docs
 
 _These are links to the latest documentation, which may have changed since the beta was cut._
-  * [API documentation](https://google.github.io/guice/api-docs/latest/javadoc/index.html)
-  * [API Changes from 3.0 to 4.0, by JDiff](http://google.github.io/guice/api-docs/latest/api-diffs/changes.html)
+  * [API documentation](https://google.github.io/guice/api-docs/4.0/javadoc/index.html)
+  * [API Changes from 3.0 to 4.0, by JDiff](http://google.github.io/guice/api-docs/4.0/api-diffs/changes.html)
 
 #### New Features
 
