@@ -21,5 +21,5 @@ _These are links to the latest documentation, which may have changed since the b
   * _List of changes pending release._
 
 #### Migrating from Guice 3.0
-See the [JDiff change report](http://google.github.io/guice/api-docs/latest/api-diffs/changes.html) for complete details.
+See the [JDiff change report](http://google.github.io/guice/api-docs/4.0/api-diffs/changes.html) for complete details.
 
