@@ -2,6 +2,39 @@
 
 Released April 28, 2015
 
+#### Maven
+
+Guice:
+
+```xml
+<dependency>
+  <groupId>com.google.inject</groupId>
+  <artifactId>guice</artifactId>
+  <version>4.0</version>
+</dependency>
+```
+
+Guice (No AOP):
+
+```xml
+<dependency>
+  <groupId>com.google.inject</groupId>
+  <artifactId>guice</artifactId>
+  <version>4.0</version>
+  <classifier>no_aop</classifier>
+</dependency>
+```
+
+Extensions:
+
+```xml
+<dependency>
+  <groupId>com.google.inject.extensions</groupId>
+  <artifactId>guice-${extension}</artifactId>
+  <version>4.0</version>
+</dependency>
+```
+
 #### Downloads
 
  * Guice: [guice-4.0.jar](http://search.maven.org/remotecontent?filepath=com/google/inject/guice/4.0/guice-4.0.jar)
