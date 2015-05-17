@@ -46,7 +46,7 @@ Extensions:
   * [API documentation](https://google.github.io/guice/api-docs/4.0/javadoc/index.html)
   * [API Changes from 3.0 to 4.0, by JDiff](http://google.github.io/guice/api-docs/4.0/api-diffs/changes.html)
 
-#### Changelog (since Guice 3.0)
+#### Changes since Guice 3.0
 ##### Some highlights:
    * Java8 runtime compatibility for Guice core & all extensions.
    * Added [testlib extension](http://search.maven.org/#artifactdetails%7Ccom.google.inject.extensions%7Cguice-testlib%7C4.0%7Cjar), initially with support for easily [binding fields in tests] (https://github.com/google/guice/wiki/BoundFields) using [BoundFieldModule](https://google.github.io/guice/api-docs/4.0/javadoc/com/google/inject/testing/fieldbinder/BoundFieldModule.html).
