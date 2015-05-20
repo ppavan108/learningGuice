@@ -119,7 +119,7 @@ Extensions:
   * Fixed Multibinder & MapBinder so they can't conflict with each other ([issue 670](https://github.com/google/guice/issues/670)).
   * Improved error messages for duplicate bindings so it tells you what the duplicates were and where they were bound.
 
-##### AssistedInject
+###### AssistedInject
    * Changed the validation on assisted injected classes to fail if the class has a scoping annotation.
 
 ###### ThrowingProvider
