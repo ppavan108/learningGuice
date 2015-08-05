@@ -24,7 +24,7 @@ Only classes loaded by the bridge class loader will work in an OSGi environment.
 
 
 #### Disabling Guice's Bridge ClassLoader
-Setting the system property `guice.custom.loader` to `false` will cause Guice to use the target class's classloader for all generated classes. Guice's bridge classloader will not be used.
+Setting the system property `guice_custom_class_loading` to `OFF` will cause Guice to use the target class's classloader for all generated classes. Guice's bridge classloader will not be used.
 
 
 #### Generated Classes and Memory Leaks
