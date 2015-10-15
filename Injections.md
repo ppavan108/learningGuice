@@ -89,7 +89,7 @@ When [migrating an application](http://publicobject.com/2007/07/guice-patterns-1
     ...
   }
 ```
-Guice will inject class's static members that have the `@Injected` annotation:
+Guice will inject class's static members that have the `@Inject` annotation:
 ```java
 class ProcessorFactory {
   @Inject static Provider<Processor> processorProvider;
