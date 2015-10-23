@@ -4,7 +4,7 @@ To eliminate `NullPointerExceptions` in your codebase, you must be disciplined a
 The [Guava: Google Core Libraries for Java](http://code.google.com/p/guava-libraries/) and [JSR-305](http://code.google.com/p/jsr-305/) have simple APIs to get a nulls under control. `Preconditions.checkNotNull` can be used to fast-fail if a null reference is found, and `@Nullable` can be used to annotate a parameter that permits the `null` value:
 ```java
 import static com.google.common.base.Preconditions.checkNotNull;
-import static javax.annotation.Nullable;
+import javax.annotation.Nullable;
 
 public class Person {
   ...
