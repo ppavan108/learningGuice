@@ -48,7 +48,7 @@ Extensions:
 
 #### Changes since Guice 4.0
 ##### Guice Core:
-  * `@ProvidedBy` supports javax.inject.Provider [issue #808](https://github.com/google/guice/issues/808)
+  * `@ProvidedBy` supports javax.inject.Provider ([issue #808](https://github.com/google/guice/issues/808))
   * Reduced the number of lines in error messages.
   * Fix potential rare deadlock when there are multi-threaded cycles in singletons.
   * Allow members injection to happen in parallel if it was requested from different threads.
@@ -57,7 +57,7 @@ Extensions:
   * Various performance optimizations.
 
 ##### AssistedInject:
-  * Skip static methods in interfaces (for Java8 compatibility) [issue #937](https://github.com/google/guice/issues/937)
+  * Skip static methods in interfaces (for Java8 compatibility) ([issue #937](https://github.com/google/guice/issues/937))
 
 ##### Servlet:
   * Add Iterable overloads for the varargs methods in ServletModule.
@@ -71,11 +71,9 @@ Extensions:
   * Fix `@Bind` to support javax.inject.Provider.
   * Allow `@Bind` to bind to null if annotated with `@Nullable`.
   * Allow `@Bind(lazy=true)` with Providers.
-  * 
 
 ##### Dagger Adapter:
   * Support the new multibinding declaration style (`@IntoSet`, etc..)
-  * 
 
 
 #### Migrating from Guice 4.0
