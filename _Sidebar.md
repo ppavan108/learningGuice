@@ -62,6 +62,7 @@
     * [[Optional AOP|OptionalAOP]]
     * [[Spring Comparison|SpringComparison]]
   * Releases
+    * [[Guice 4.1|Guice41]]
     * [[Guice 4.0|Guice40]]
     * [[Guice 3.0|Guice30]]
     * [[Guice 2.0|Guice20]]
