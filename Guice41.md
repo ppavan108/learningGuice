@@ -55,6 +55,7 @@ Extensions:
   * Make disableCircularProxies more strict.
   * Updated the internal cglib to 3.2.0 to allow Guice to be used with signed jars.
   * Various performance optimizations.
+  * TypeListeners no longer get invoked for `Provider` instances that Guice generates for `@Provides` methods.
 
 ##### AssistedInject:
   * Skip static methods in interfaces (for Java8 compatibility) ([issue #937](https://github.com/google/guice/issues/937))
