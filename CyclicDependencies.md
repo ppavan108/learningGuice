@@ -154,7 +154,7 @@ Each of those objects needs the other object. Here, you can use [[AssistedInject
 
 ```java
 public class FooPresenter {
-	privat final FooView view;
+	private final FooView view;
 	@Inject public FooPresenter(FooView.Factory viewMaker) {
 		view = viewMaker.create(this);
 	}
