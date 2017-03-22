@@ -40,7 +40,7 @@ Lastly we create a binding that uses the annotation. This uses the optional `ann
 
 
 ### @Named
-Guice comes with a built-in binding annotation `@Named` that uses a string:
+Guice comes with a built-in binding annotation `@Named` that takes a string:
 ```java
 public class RealBillingService implements BillingService {
 
@@ -56,10 +56,8 @@ To bind a specific name, use `Names.named()` to create an instance to pass to `a
         .annotatedWith(Names.named("Checkout"))
         .to(CheckoutCreditCardProcessor.class);
 ```
-Since the compiler can't check the string, we recommend using `@Named` sparingly.
-
+Since the compiler can't check the string, we recommend using `@Named` sparingly. Defining your own purpose-built annotations provides better type-safety.
 
 ### Binding Annotations with Attributes
-Guice supports binding annotations that have attribute values. In the rare case that you need such an annotation:
-  1. Create the annotation `@interface`.
-  2. Create a class that implements the annotation interface. Follow the guidelines for `equals()` and `hashCode()` specified in the [Annotation Javadoc](http://java.sun.com/javase/6/docs/api/java/lang/annotation/Annotation.html). Pass an instance of this to the `annotatedWith()` binding clause.
+
+Guice supports binding annotations that have attribute values (like `@Named`). In the rare case that you need such an annotation we encourage you to use [`@AutoAnnotation`](https://github.com/google/auto/blob/master/value/userguide/howto.md#annotation) from the Auto/Value project, as properly implementing an annotation is error-prone. If you do decide to manually create a custom implementation be sure to properly implement the `equals()` and `hashCode()` specifications detailed in the [`Annotation` Javadoc](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html). Pass an instance of this class to the `annotatedWith()` binding clause.
